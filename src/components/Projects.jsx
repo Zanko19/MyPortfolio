@@ -3,12 +3,12 @@ import earth from '../assets/earth.png';
 
 const Projects = () => {
   const projects = [
-    { name: 'Getfix', status: 'completed' },
+    { name: 'Getflix', status: 'completed' },
     { name: 'Blogchain', status: 'completed' },
     { name: 'PRP', status: 'completed' },
     { name: 'One day One pic', status: 'completed' },
     { name: 'BP FLOW', status: 'completed' },
-    { name: 'Capatix', status: 'completed' },
+    { name: 'Capafix', status: 'completed' },
     { name: 'Loading..', status: 'pending' },
     { name: 'Loading..', status: 'pending' }
   ];
@@ -26,18 +26,6 @@ const Projects = () => {
           src={rocket} 
           alt="Rocket" 
           className="w-48 h-48 animate-pulse"
-        />
-      </div>
-
-      {/* Planète en bas */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <img 
-          src={earth} 
-          alt="Earth" 
-          className="w-full h-64 object-cover"
-          style={{
-            maskImage: 'linear-gradient(to top, rgba(0,0,0,1) 50%, transparent 100%)'
-          }}
         />
       </div>
 

@@ -7,6 +7,7 @@ import CV from './components/CV';
 import Contact from './components/Contact';
 import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <CV />
       <Contact />
       <ScrollToTop />
+      <Footer />
     </Layout>
   );
 }

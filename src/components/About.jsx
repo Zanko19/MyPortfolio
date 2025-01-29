@@ -4,7 +4,7 @@ import code from '../assets/code.gif';
 import sport from '../assets/water-polo.gif';
 import cake from '../assets/cake.gif';
 import space from '../assets/uranus.gif';
-import swim from '../assets/nageur.png';
+import swim from '../assets/nageur.gif';
 import coffee from '../assets/coffee.gif';
 
 const About = () => {
@@ -62,7 +62,9 @@ const About = () => {
                 <img src={space} alt="Space" className="w-16 h-16" />
               </div>
               <div className="hover-card">
-                <img src={coffee} alt="Swim" className="w-16 h-16" />
+                <img src={swim} alt="Swim" className="w-16 h-16" />
+              </div><div className="hover-card">
+                <img src={coffee} alt="coffee" className="w-16 h-16" />
               </div>
             </div>
           </div>
