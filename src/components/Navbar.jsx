@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Menu gauche */}
           <div className="flex space-x-8">
-            <a href="#home" className="text-white/80 hover:text-white transition-all">Home</a>
+            <a href="#hero" className="text-white/80 hover:text-white transition-all">Home</a>
             <a href="#about" className="text-white/80 hover:text-white transition-all">About</a>
             <a href="#projects" className="text-white/80 hover:text-white transition-all">Projects</a>
           </div>

@@ -1,9 +1,9 @@
 import avatar from '../assets/avatar.png';
 import planet from '../assets/planet.png';
-import code from '../assets/binaire.png';
-import sport from '../assets/water-polo.png';
-import cake from '../assets/cupcake.png';
-import space from '../assets/uranus.png';
+import code from '../assets/code.gif';
+import sport from '../assets/water-polo.gif';
+import cake from '../assets/cake.gif';
+import space from '../assets/uranus.gif';
 import swim from '../assets/nageur.png';
 import coffee from '../assets/coffee.gif';
 
