@@ -26,19 +26,22 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Menu gauche */}
-          <div className="flex space-x-8">
+
+          {/* Menu gauche - visible en desktop uniquement */}
+          <div className="hidden lg:flex space-x-8">
             <a href="#hero" className="text-white/80 hover:text-white transition-all">Home</a>
             <a href="#about" className="text-white/80 hover:text-white transition-all">About</a>
             <a href="#projects" className="text-white/80 hover:text-white transition-all">Projects</a>
           </div>
 
-          {/* Logo central */}
-          <img 
-            src={gLogo} 
-            alt="G Logo" 
-            className="h-12 w-12 opacity-90 hover:opacity-100 transition-all"
-          />
+          {/* Logo central - centré sur mobile et desktop */}
+          <div className="flex justify-center items-center w-full">
+            <img 
+              src={gLogo} 
+              alt="G Logo" 
+              className="h-12 w-12 opacity-90 hover:opacity-100 transition-all mx-auto"
+            />
+          </div>
 
           {/* Icône mobile - ouvrir/fermer le menu */}
           <div className="lg:hidden flex items-center">
@@ -51,8 +54,8 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Menu droite */}
-          <div className={`lg:flex space-x-8 items-center ${isOpen ? 'block' : 'hidden'} lg:block`} id="menu">
+          {/* Menu droite - visible en desktop uniquement */}
+          <div className={`hidden lg:flex space-x-10 items-center`}>
             <a href="#devtools" className="text-white/80 hover:text-white transition-all">DevTools</a>
             <a href="#cv" className="text-white/80 hover:text-white transition-all">CV</a>
             <a href="#contact" className="text-white/80 hover:text-white transition-all flex items-center">
@@ -60,6 +63,22 @@ const Navbar = () => {
               <img src={astronaut} alt="Astronaut" className="h-5 w-5 ml-2" />
             </a>
           </div>
+        </div>
+
+        {/* Menu mobile déroulant */}
+        <div 
+          className={`lg:hidden ${isOpen ? 'block' : 'hidden'} bg-black/80 absolute top-20 left-0 right-0 p-6`}
+          id="menu"
+        >
+          <a href="#hero" className="block text-white/80 hover:text-white transition-all py-2">Home</a>
+          <a href="#about" className="block text-white/80 hover:text-white transition-all py-2">About</a>
+          <a href="#projects" className="block text-white/80 hover:text-white transition-all py-2">Projects</a>
+          <a href="#devtools" className="block text-white/80 hover:text-white transition-all py-2">DevTools</a>
+          <a href="#cv" className="block text-white/80 hover:text-white transition-all py-2">CV</a>
+          <a href="#contact" className="block text-white/80 hover:text-white transition-all flex items-center py-2">
+            Contact me
+            <img src={astronaut} alt="Astronaut" className="h-5 w-5 ml-2" />
+          </a>
         </div>
       </div>
     </nav>
