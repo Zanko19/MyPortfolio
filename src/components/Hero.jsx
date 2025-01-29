@@ -30,13 +30,13 @@ const Hero = () => {
             <img 
               src={avatar} 
               alt="Profile" 
-              className="w-48 h-48 rounded-full ml-8 animate-fadeIn shadow-lg shadow-black/50"
+              className="w-48 h-48 rounded-full ml-8 mb-4 animate-fadeIn shadow-lg shadow-black/50"
             />
           </div>
         </div>
 
         {/* Boutons */}
-        <div className="flex justify-center gap-8 mt-16">
+        <div className="flex justify-center gap-8 mt-8">
   {["Projects", "DevTools", "CV"].map((text) => (
     <button
       key={text}

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import gLogo from '../assets/g.png';
 import astronaut from '../assets/astronaut.png';
@@ -6,46 +6,34 @@ import astronaut from '../assets/astronaut.png';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Utilisation de useEffect pour fermer le menu si l'utilisateur clique à l'extérieur
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      const menu = document.getElementById('menu');
-      if (menu && !menu.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener('click', handleClickOutside);
-
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, []);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <nav className="fixed top-0 w-full z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+    <nav className="fixed top-0 w-full z-50 bg-transparent">
+      <div className="container mx-auto px-10">
+        <div className="flex items-center justify-between">
 
           {/* Menu gauche - visible en desktop uniquement */}
           <div className="hidden lg:flex space-x-8">
-            <a href="#hero" className="text-white/80 hover:text-white transition-all">Home</a>
-            <a href="#about" className="text-white/80 hover:text-white transition-all">About</a>
-            <a href="#projects" className="text-white/80 hover:text-white transition-all">Projects</a>
+            <a href="#hero" className="text-white/80 hover:text-white transition-all px-2">Home</a>
+            <a href="#about" className="text-white/80 hover:text-white transition-all px-2">About</a>
+            <a href="#projects" className="text-white/80 hover:text-white transition-all px-2">Projects</a>
           </div>
 
-          {/* Logo central - centré sur mobile et desktop */}
+          {/* Logo central */}
           <div className="flex justify-center items-center w-full">
             <img 
               src={gLogo} 
               alt="G Logo" 
-              className="h-12 w-12 opacity-90 hover:opacity-100 transition-all mx-auto"
+              className="h-12 w-12 md:h-24 md:w-24 opacity-90 hover:opacity-100 transition-all mx-auto"
             />
           </div>
 
           {/* Icône mobile - ouvrir/fermer le menu */}
           <div className="lg:hidden flex items-center">
-            <button onClick={() => setIsOpen(!isOpen)}>
+            <button onClick={toggleMenu}>
               {isOpen ? (
                 <FaTimes className="text-white" size={24} />
               ) : (
@@ -55,29 +43,37 @@ const Navbar = () => {
           </div>
 
           {/* Menu droite - visible en desktop uniquement */}
-          <div className={`hidden lg:flex space-x-10 items-center`}>
-            <a href="#devtools" className="text-white/80 hover:text-white transition-all">DevTools</a>
-            <a href="#cv" className="text-white/80 hover:text-white transition-all">CV</a>
-            <a href="#contact" className="text-white/80 hover:text-white transition-all flex items-center">
-              Contact me
-              <img src={astronaut} alt="Astronaut" className="h-5 w-5 ml-2" />
+          <div className="hidden lg:flex space-x-10 items-center">
+            <a href="#devtools" className="text-white/80 hover:text-white transition-all px-2">DevTools</a>
+            <a href="#cv" className="text-white/80 hover:text-white transition-all px-2">CV</a>
+            <a href="#contact" className="text-white/80 hover:text-white transition-all flex items-center px-2 group">
+              Contact
+              <img 
+                src={astronaut} 
+                alt="Astronaut" 
+                className="h-8 w-8 ml-2 transition-all group-hover:scale-125 group-hover:brightness-150" 
+              />
             </a>
           </div>
         </div>
 
         {/* Menu mobile déroulant */}
         <div 
-          className={`lg:hidden ${isOpen ? 'block' : 'hidden'} bg-black/80 absolute top-20 left-0 right-0 p-6`}
+          className={`lg:hidden ${isOpen ? 'block' : 'hidden'} bg-black/80 absolute top-20 left-0 right-0 p-6 z-50`}
           id="menu"
         >
-          <a href="#hero" className="block text-white/80 hover:text-white transition-all py-2">Home</a>
-          <a href="#about" className="block text-white/80 hover:text-white transition-all py-2">About</a>
-          <a href="#projects" className="block text-white/80 hover:text-white transition-all py-2">Projects</a>
-          <a href="#devtools" className="block text-white/80 hover:text-white transition-all py-2">DevTools</a>
-          <a href="#cv" className="block text-white/80 hover:text-white transition-all py-2">CV</a>
-          <a href="#contact" className="block text-white/80 hover:text-white transition-all flex items-center py-2">
-            Contact me
-            <img src={astronaut} alt="Astronaut" className="h-5 w-5 ml-2" />
+          <a href="#hero" className="block text-white/80 hover:text-white transition-all py-2 px-4">Home</a>
+          <a href="#about" className="block text-white/80 hover:text-white transition-all py-2 px-4">About</a>
+          <a href="#projects" className="block text-white/80 hover:text-white transition-all py-2 px-4">Projects</a>
+          <a href="#devtools" className="block text-white/80 hover:text-white transition-all py-2 px-4">DevTools</a>
+          <a href="#cv" className="block text-white/80 hover:text-white transition-all py-2 px-4">CV</a>
+          <a href="#contact" className="block text-white/80 hover:text-white transition-all items-center py-2 px-4 flex group">
+            Contact
+            <img 
+              src={astronaut} 
+              alt="Astronaut" 
+              className="h-5 w-5 ml-2 transition-all group-hover:scale-125 group-hover:brightness-200" 
+            />
           </a>
         </div>
       </div>
