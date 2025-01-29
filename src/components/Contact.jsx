@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import earth from '../assets/earth.png';
+import { FaGithub, FaLinkedin, FaEnvelope, FaHeart } from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -81,11 +83,18 @@ const Contact = () => {
           </div>
 
           {/* Liens sociaux */}
-          <div className="flex justify-center space-x-6 mt-8">
-            <a href="#" className="text-white/80 hover:text-white transition-all">GitHub</a>
-            <a href="#" className="text-white/80 hover:text-white transition-all">LinkedIn</a>
-            <a href="#" className="text-white/80 hover:text-white transition-all">Twitter</a>
-          </div>
+           {/* Icônes de réseaux sociaux */}
+        <div className="mt-4 flex justify-center space-x-6">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <FaGithub className="text-white/60 hover:text-white transition-colors" size={24} />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin className="text-white/60 hover:text-white transition-colors" size={24} />
+          </a>
+          <a href="mailto:example@example.com">
+            <FaEnvelope className="text-white/60 hover:text-white transition-colors" size={24} />
+          </a>
+        </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaHeart } from "react-icons/fa";
 import earth from '../assets/earth.png';
 
 const Footer = () => {
@@ -7,8 +7,11 @@ const Footer = () => {
       {/* Contenu du footer */}
       <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="text-center text-white/60 font-mono">
-          © 2024 - Designed & Developed with 💫
+          © 2025 - Designed & Developed with 
+          <FaHeart className="inline-block text-red-500 ml-1" />
         </div>
+        
+       
       </div>
 
       {/* Image de la Terre avec le même style que dans Projects */}
