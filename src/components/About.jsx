@@ -7,27 +7,23 @@ import space from "../assets/uranus.gif";
 import swim from "../assets/nageur.gif";
 import argile from "../assets/argile.gif";
 import me from "../assets/moi.jpg";
+import saturn from '../assets/space.png';
 
 const About = () => {
   return (
     <section id="about" className="min-h-screen relative">
       {/* Planète décorative */}
       <img
-        src={planet}
+        src={saturn}
         alt="Planet"
-        className="absolute left-20 top-32 w-48 h-48 animate-float"
+        className="absolute left-20 top-16 w-54 h-48 animate-float"
       />
 
       <div className="container mx-auto px-4 pt-32 relative z-10">
         {/* Titre avec avatar */}
         <div className="text-center mb-6">
           <h2 className="text-6xl font-mono text-white title-text">
-            About
-            <img
-              src={me}
-              alt="Me"
-              className="inline-block w-24 h-24 rounded-full border-2 border-[rgb(199,50,49)]"
-            />
+            About me
           </h2>
         </div>
 
@@ -37,27 +33,37 @@ const About = () => {
           <div className="glass-container p-6 border border-white/10 rounded-tl-[50px] rounded-tr-none rounded-br-[50px] rounded-bl-none">
             <h3 className="text-white text-2xl font-mono mb-4">Parcours</h3>
             <ul className="text-white/80 font-mono text-sm space-y-4">
-              <li>🚀 Formation Développeur Web - [Nom de l'école]</li>
+              <li>🚀 Formation Développeur Web - BeCode</li>
               <li>
-                🌌 Stage chez [Nom de l'entreprise] - Développement Front-End
+                🌌 Stage chez BpFlow - Développement Front-End
               </li>
               <li>
-                🛰️ Projet personnel : Création d'un site sur l'espace avec React
+                🛰️ Projet personnel : Création d'un portfolio
               </li>
             </ul>
           </div>
 
           {/* Description */}
           <div className="glass-container p-6 border border-white/10 rounded-3xl">
-            <p className="text-white/80 font-mono text-sm leading-relaxed">
-              Passionné par le développement web et l'exploration spatiale, je
-              combine créativité et technique pour créer des expériences
-              utilisateur innovantes. Mon parcours m'a permis de maîtriser des
-              technologies comme React et Tailwind CSS, tout en gardant un œil
-              sur les étoiles. Chaque projet est pour moi une nouvelle mission à
-              accomplir, avec précision et curiosité.
-            </p>
-          </div>
+  <div className="flex items-start">
+    <img
+      src={me}
+      alt="Me"
+      className="w-24 h-24 rounded-full border-2 border-[rgb(199,50,49)]"
+    />
+    <p className="text-white/80 font-mono text-sm leading-relaxed ml-4 mb-2">
+      Passionné par le développement web et l'exploration spatiale, je
+      combine créativité et technique pour créer des expériences
+      utilisateur innovantes.<br></br>
+    </p>
+  </div>
+  <p className="text-white/80 font-mono text-sm leading-relaxed">
+    Mon parcours m'a permis de maîtriser des technologies comme React et
+    Tailwind CSS, tout en gardant un œil sur les étoiles. Chaque projet est
+    pour moi une nouvelle mission à accomplir, avec précision et curiosité.
+  </p>
+</div>
+
 
           {/* Hobbies */}
           <div className="glass-container p-6 border border-white/10 rounded-tl-none rounded-tr-[50px] rounded-br-none rounded-bl-[50px]">

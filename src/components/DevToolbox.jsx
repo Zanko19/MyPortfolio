@@ -7,9 +7,9 @@ const DevToolbox = () => {
   ];
 
   return (
-    <section id="devtools" className="min-h-screen relative">
+    <section id="devtools" className="min-h-screen relative ">
       <div className="container mx-auto px-4 pt-32">
-        <h2 className="text-center text-6xl font-mono text-white mb-16 title-text">
+        <h2 className="text-center text-6xl font-mono text-white mb-16 title-text backdrop-blur-lg">
           Dev Toolbox
         </h2>
 

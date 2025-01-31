@@ -73,7 +73,7 @@ const Projects = () => {
                   <>
                     {/* Overlay sombre (visible au départ) */}
                     {projectImage && (
-                      <div className="absolute inset-0 bg-black/50 transition-opacity duration-300 group-hover:opacity-0"></div>
+                      <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-0"></div>
                     )}
 
                     {/* Texte du projet (disparaît au hover) */}
