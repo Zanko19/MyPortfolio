@@ -22,11 +22,11 @@ const About = () => {
         {/* Titre avec avatar */}
         <div className="text-center mb-6">
           <h2 className="text-6xl font-mono text-white title-text">
-            About{" "}
+            About
             <img
               src={me}
               alt="Me"
-              className="inline-block w-24 h-24 rounded-full border-2 border-purple-400"
+              className="inline-block w-24 h-24 rounded-full border-2 border-[rgb(199,50,49)]"
             />
           </h2>
         </div>
