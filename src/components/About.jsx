@@ -6,6 +6,7 @@ import cake from '../assets/cake.gif';
 import space from '../assets/uranus.gif';
 import swim from '../assets/nageur.gif';
 import argile from '../assets/argile.gif';
+import me from '../assets/moi.jpg';
 
 const About = () => {
   return (
@@ -18,53 +19,90 @@ const About = () => {
       />
 
       <div className="container mx-auto px-4 pt-32 relative z-10">
-        <h2 className="text-center text-6xl font-mono text-white mb-16">
-          About me
-        </h2>
+        {/* Titre avec avatar */}
+        <div className="text-center mb-6">
+          <h2 className="text-6xl font-mono text-white">
+            About{" "}
+            <img 
+              src={me} 
+              alt="Me" 
+              className="inline-block w-24 h-24 rounded-full border-2 border-purple-400" 
+            />
+          </h2>
+        </div>
 
-       {/* Grille 3 colonnes */}
-<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-  {/* Parcours */}
-  <div className="glass-container rounded-3xl p-6 border border-white/10">
-    <h3 className="text-white text-2xl font-mono mb-4">Parcours</h3>
-  </div>
+        {/* Grille 3 colonnes */}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr_1fr] gap-8 max-w-6xl mx-auto">
 
-  {/* Description */}
-  <div className="glass-container rounded-3xl p-6 border border-white/10">
-    <p className="text-white/80 font-mono text-sm leading-relaxed">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus consectetur magna, at pulvinar ante. Sed eget elit vehicula, congue dolor in, sodales arcu. In quam risus, convallis convallis massa sed, ut dignissim nulla nibh. Suspendisse enim sem, porta eget urna a, facilisis torwest lorem. Aliquam quis nunc ut ex maximus malesuada interdum a neque. Sed at nibh eu purus ultricies tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Pellentesque imperdiet finibus purus eget ultrices.
-    </p>
-  </div>
+          {/* Parcours */}
+            <div className="glass-container p-6 border border-white/10 rounded-tl-[50px] rounded-tr-none rounded-br-[50px] rounded-bl-none">
+            <h3 className="text-white text-2xl font-mono mb-4">Parcours</h3>
+            <ul className="text-white/80 font-mono text-sm space-y-4">
+              <li>🚀 Formation Développeur Web - [Nom de l'école]</li>
+              <li>🌌 Stage chez [Nom de l'entreprise] - Développement Front-End</li>
+              <li>🛰️ Projet personnel : Création d'un site sur l'espace avec React</li>
+            </ul>
+          </div>
 
-  {/* Hobbies */}
-  <div className="glass-container rounded-3xl p-6 border border-white/10">
-    <h3 className="text-white text-2xl font-mono mb-6 justify-center items-center flex">Qui suis-je?/hobby</h3>
-    <div className="grid grid-cols-2 gap-6">
-      {/* Conteneur pour chaque image */}
-      <div className="hover-card flex justify-center items-center">
-        <img src={code} alt="Code" className="w-20 h-20" />
-      </div>
-      <div className="hover-card flex justify-center items-center">
-        <img src={sport} alt="Sport" className="w-20 h-20" />
-      </div>
-      <div className="hover-card flex justify-center items-center">
-        <img src={cake} alt="Cake" className="w-20 h-20" />
-      </div>
-      <div className="hover-card flex justify-center items-center">
-        <img src={space} alt="Space" className="w-20 h-20" />
-      </div>
-      <div className="hover-card flex justify-center items-center">
-        <img src={swim} alt="Swim" className="w-20 h-20" />
-      </div>
-      <div className="hover-card flex justify-center items-center">
-        <img src={argile} alt="argile" className="w-20 h-20" />
-      </div>
-    </div>
-  </div>
-</div>
+          {/* Description */}
+          <div className="glass-container p-6 border border-white/10 rounded-3xl">
+            <p className="text-white/80 font-mono text-sm leading-relaxed">
+              Passionné par le développement web et l'exploration spatiale,
+              je combine créativité et technique pour créer des expériences utilisateur innovantes.
+              Mon parcours m'a permis de maîtriser des technologies comme React et Tailwind CSS, tout en gardant un œil sur les étoiles.
+              Chaque projet est pour moi une nouvelle mission à accomplir, avec précision et curiosité.
+            </p>
+          </div>
+
+          {/* Hobbies */}
+          <div className="glass-container p-6 border border-white/10 rounded-tl-none rounded-tr-[50px] rounded-br-none rounded-bl-[50px]">
+            <h3 className="text-white text-2xl font-mono mb-6 justify-center items-center flex">
+              Qui suis-je?/hobby
+            </h3>
+            <div className="grid grid-cols-2 gap-6">
+              {/* Conteneur pour chaque image */}
+              <div className="hover-card flex justify-center items-center relative group">
+                <img src={code} alt="Code" className="w-20 h-20" />
+                <div className="absolute bottom-0 bg-black/75 text-white text-sm p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Code
+                </div>
+              </div>
+              <div className="hover-card flex justify-center items-center relative group">
+                <img src={sport} alt="Sport" className="w-20 h-20" />
+                <div className="absolute bottom-0 bg-black/75 text-white text-sm p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Water-Polo
+                </div>
+              </div>
+              <div className="hover-card flex justify-center items-center relative group">
+                <img src={cake} alt="Cake" className="w-20 h-20" />
+                <div className="absolute bottom-0 bg-black/75 text-white text-sm p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Pâtisserie
+                </div>
+              </div>
+              <div className="hover-card flex justify-center items-center relative group">
+                <img src={space} alt="Space" className="w-20 h-20" />
+                <div className="absolute bottom-0 bg-black/75 text-white text-sm p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Astronomie
+                </div>
+              </div>
+              <div className="hover-card flex justify-center items-center relative group">
+                <img src={swim} alt="Swim" className="w-20 h-20" />
+                <div className="absolute bottom-0 bg-black/75 text-white text-sm p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Nager
+                </div>
+              </div>
+              <div className="hover-card flex justify-center items-center relative group">
+                <img src={argile} alt="Argile" className="w-20 h-20" />
+                <div className="absolute bottom-0 bg-black/75 text-white text-sm p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Argile
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default About; 
+export default About;

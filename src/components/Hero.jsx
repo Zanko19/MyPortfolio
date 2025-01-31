@@ -1,6 +1,7 @@
 import avatar from '../assets/avatar.png';
 import boom from '../assets/boom.jpg';
 import '../styles/main.css';
+import me from '../assets/moi.jpg';
 
 const Hero = () => {
   return (
