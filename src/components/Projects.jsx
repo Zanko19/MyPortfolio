@@ -16,7 +16,7 @@ const Projects = () => {
   return (
     <section id="projects" className="min-h-screen relative">
       {/* Titre */}
-      <h2 className="text-center text-6xl font-mono text-white pt-32 mb-16">
+      <h2 className="text-center text-6xl font-mono text-white pt-32 mb-16 title-text">
         Projects
       </h2>
 

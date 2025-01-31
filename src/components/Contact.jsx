@@ -25,7 +25,7 @@ const Contact = () => {
   return (
     <section id="contact" className="min-h-screen relative">
       <div className="container mx-auto px-4 pt-32">
-        <h2 className="text-center text-6xl font-mono text-white mb-16">
+        <h2 className="text-center text-6xl font-mono text-white mb-16 title-text">
           Contact me
         </h2>
 

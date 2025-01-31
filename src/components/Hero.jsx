@@ -9,9 +9,10 @@ const Hero = () => {
       <div className="container mx-auto px-4 pt-32 flex flex-col items-center">
         {/* Titre principal dans un cadre arrondi avec bordure */}
         <div className="w-full max-w-4xl mx-auto p-8 rounded-[40px] glass-container">
-          <h1 className="text-center text-6xl font-bold tracking-wider uppercase mb-4 title-text">
-            2025 PORTFOLIO
-          </h1>
+        <h1 className="text-center text-6xl font-bold tracking-wider uppercase mb-4 title-text">
+  2025 PORTFOLIO
+</h1>
+
 
           <h2 className="text-center text-2xl font-light tracking-widest mb-8 subtitle-text">
             Front-end web developer

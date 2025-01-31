@@ -156,3 +156,8 @@
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
+.title-text {
+  color: transparent;
+  -webkit-text-stroke: 1px white; /* Contour blanc */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
