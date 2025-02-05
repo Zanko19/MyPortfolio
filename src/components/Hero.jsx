@@ -9,18 +9,18 @@ const Hero = () => {
       <div className="container mx-auto px-4 pt-32 flex flex-col items-center">
         {/* Titre principal dans un cadre arrondi avec bordure */}
         <div className="w-full max-w-4xl mx-auto p-8 rounded-[40px] glass-container">
-        <h1 className="text-center text-6xl font-bold tracking-wider uppercase mb-4 title-text">
+        <h1 className="text-center text-6xl font-bold tracking-wider uppercase mb-4 title-text ">
   2025 PORTFOLIO
 </h1>
 
 
-          <h2 className="text-center text-2xl font-light tracking-widest mb-8 subtitle-text">
+          <h2 className="text-center text-2xl font-light tracking-widest mb-8 subtitle-text ">
             Front-end web developer
           </h2>
 
           <div className="flex justify-between items-center">
             <div className="max-w-2xl">
-              <p className="font-mono text-white/80 text-lg leading-relaxed">
+              <p className="font-mono text-white/80 text-lg leading-relaxed ">
                 Hi, I'm Guillaume a passionate and devoted front-end developer. 
                 I'm specializing in React and tailwind but eager to learn more 
                 of the back end and im trying to lorem ipsum50.

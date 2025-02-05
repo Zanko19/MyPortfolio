@@ -1,8 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 
 
 html {
@@ -13,24 +8,4 @@ html {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-
-/* Animation de typewriter */
-.typewriter {
-  overflow: hidden;
-  border-right: 2px solid rgba(255,255,255,.75);
-  white-space: nowrap;
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: rgba(255,255,255,.75) }
 }

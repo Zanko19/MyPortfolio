@@ -1,6 +1,8 @@
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Projects from '../components/Projects';
+import DevToolbox from '../components/DevToolbox';
+import CV from '../components/CV';
 import Contact from '../components/Contact';
 
 const Home = () => {
@@ -9,6 +11,8 @@ const Home = () => {
       <Hero />
       <About />
       <Projects />
+      <DevToolbox />
+      <CV />
       <Contact />
     </main>
   );

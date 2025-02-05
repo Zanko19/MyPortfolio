@@ -22,7 +22,7 @@ const About = () => {
       <div className="container mx-auto px-4 pt-32 relative z-10">
         {/* Titre avec avatar */}
         <div className="text-center mb-6">
-          <h2 className="text-6xl font-mono text-white title-text">
+          <h2 className="text-6xl font-mono text-white title-text ">
             About me
           </h2>
         </div>

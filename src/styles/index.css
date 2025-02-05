@@ -1,11 +1,25 @@
-
+/* Fichier principal pour les imports et les styles globaux */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Styles globaux */
+html {
+  scroll-behavior: smooth;
+}
 
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+body {
+  @apply bg-black;
+}
+
+/* Animation de fade-in globale */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
 /* Background and stars */
 .hero-background {
@@ -62,11 +76,13 @@
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
   color: rgba(255, 255, 255, 0.95);
 }
+
 .title-text {
   color: transparent;
-  -webkit-text-stroke: 1px white; /* Contour blanc */
+  -webkit-text-stroke: 1px white;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
+
 .subtitle-text {
   font-family: "Space Mono", monospace;
   text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
@@ -83,94 +99,11 @@
 .glass-container:hover {
   background: rgba(255, 255, 255, 0.06);
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 /* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 1s ease-out;
-}
-
-/* Animation de pulsation pour la fusée */
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1) translateY(0);
-  }
-  50% {
-    transform: scale(1.05) translateY(-10px);
-  }
-}
-
-.animate-pulse {
-  animation: pulse 3s ease-in-out infinite;
-}
-
-/* Animation de flamme normale */
-@keyframes flame {
-  0%,
-  100% {
-    transform: translateX(-50%) scaleY(0.8);
-    opacity: 0.5;
-  }
-  50% {
-    transform: translateX(-50%) scaleY(1.2);
-    opacity: 0.8;
-  }
-}
-
-/* Animation de propulsion au clic */
-@keyframes thrust {
-  0% {
-    transform: translateX(-50%) scaleY(2);
-    opacity: 0.8;
-  }
-  50% {
-    transform: translateX(-50%) scaleY(2.5);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-50%) scaleY(1);
-    opacity: 0.8;
-  }
-}
-
-/* Animation des flammes latérales */
-@keyframes sideThrust {
-  0%,
-  100% {
-    transform: scaleY(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: scaleY(2);
-    opacity: 0.8;
-  }
-}
-
-.animate-flame {
-  animation: flame 10s infinite ease-in-out;
-}
-
-.animate-thrust {
-  animation: thrust 3s infinite ease-in-out;
-}
-
-.animate-sideThrust {
-  animation: sideThrust 2s infinite ease-in-out;
-}
 @keyframes float {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
   50% {
@@ -199,7 +132,7 @@
   }
 }
 
-/* Styles spécifiques pour la case "Loading.." */
+/* Loading styles */
 .loading-card {
   backdrop-filter: blur(5px);
   background: rgba(255, 255, 255, 0.1);
@@ -210,41 +143,13 @@
   text-align: center;
 }
 
-/* Icône sablier animé */
 .loading-icon {
   font-size: 2rem;
   animation: spin 1.5s linear infinite;
   color: #00eaff;
 }
 
-/* Effet néon sur "Coming Soon..." */
-.neon-text {
-  color: white;
-  text-shadow: 0 0 8px #00eaff, 0 0 15px #00eaff;
-  font-weight: bold;
-  font-size: 1.25rem;
-  animation: flicker 1.5s infinite alternate;
-  margin-top: 0.5rem;
-}
-
-/* Animation de l’effet néon */
-@keyframes flicker {
-  0% {
-    opacity: 0.8;
-    text-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff;
-  }
-  100% {
-    opacity: 1;
-    text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
-  }
-}
-
-/* Animation de rotation légère */
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 
