@@ -43,7 +43,7 @@ const Projects = () => {
 
       {/* Grille de projet */}
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto subtitle-text">
           {projects.map((project, index) => {
             const isLoading = project.status === 'pending';
             const projectImage = projectImages[project.name];
