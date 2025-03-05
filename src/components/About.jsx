@@ -7,7 +7,7 @@ import space from "../assets/uranus.gif";
 import swim from "../assets/nageur.gif";
 import argile from "../assets/argile.gif";
 import me from "../assets/moi.jpg";
-import saturn from '../assets/space.png';
+import saturn from "../assets/space.png";
 
 const About = () => {
   return (
@@ -34,36 +34,38 @@ const About = () => {
             <h3 className="text-white text-2xl font-mono mb-4">Parcours</h3>
             <ul className="text-white/80 font-mono text-sm space-y-4">
               <li>🚀 Formation Développeur Web - BeCode</li>
-              <li>
-                🌌 Stage chez BpFlow - Développement Front-End
-              </li>
-              <li>
-                🛰️ Projet personnel : Création d'un portfolio
-              </li>
+              <li>🌌 Stage chez BpFlow - Développement Front-End</li>
+              <li>🛰️ Projet personnel : Création d'un portfolio</li>
             </ul>
           </div>
 
           {/* Description */}
           <div className="glass-container p-6 border border-white/10 rounded-3xl">
-  <div className="flex items-start">
-    <img
-      src={me}
-      alt="Me"
-      className="w-24 h-24 rounded-full border-2 border-[rgb(199,50,49)]"
-    />
-    <p className="text-white/80 font-mono text-sm leading-relaxed ml-4 mb-2">
-      Passionné par le développement web et l'exploration spatiale, je
-      combine créativité et technique pour créer des expériences
-      utilisateur innovantes.<br></br>
-    </p>
-  </div>
-  <p className="text-white/80 font-mono text-sm leading-relaxed">
-    Mon parcours m'a permis de maîtriser des technologies comme React et
-    Tailwind CSS, tout en gardant un œil sur les étoiles. Chaque projet est
-    pour moi une nouvelle mission à accomplir, avec précision et curiosité.
-  </p>
-</div>
-
+            <div className="flex items-start">
+              <img
+                src={me}
+                alt="Me"
+                className="w-24 h-24 rounded-full border-2 border-[rgb(199,50,49)]"
+              />
+              <p className="text-white/80 font-mono text-sm leading-relaxed ml-4 mb-2">
+                Passionné par le développement web et l'exploration spatiale, je
+                vois chaque projet comme une mission à accomplir avec précision,
+                créativité et curiosité.<br></br>
+              </p>
+            </div>
+            <p className="text-white/80 font-mono text-sm leading-relaxed">
+              Le front-end est mon terrain de jeu, et c’est avec React, Tailwind
+              CSS et TypeScript que je suis le plus à l’aise et que j’ai pu
+              faire mes preuves. Je conçois des interfaces modernes et
+              performantes, en mettant l'accent sur l'expérience utilisateur et
+              l’optimisation. Curieux et ambitieux, je me forme au back-end avec
+              Node.js, Express et les bases de données afin de devenir
+              full-stack. Chaque projet est une occasion d’apprendre, de
+              progresser et de repousser mes limites, toujours avec la même
+              passion pour l’innovation.<br></br>Front-end aujourd’hui,
+              full-stack demain. Toujours prêt à relever de nouveaux défis !
+            </p>
+          </div>
 
           {/* Hobbies */}
           <div className="glass-container p-6 border border-white/10 rounded-tl-none rounded-tr-[50px] rounded-br-none rounded-bl-[50px]">

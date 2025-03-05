@@ -8,17 +8,21 @@ const CV = () => {
   const cvOptions = [
     {
       id: "cv-eng",
-      name: "CV Basique (ENG)",
-      file: "cv-eng-gui.pdf",
+      name: "CV Guillaume Dedeurwaerder",
+      file: "CV_2025.pdf", // Le fichier doit être dans le dossier "public"
       image: "preview-cv-eng.png",
     },
   ];
+
+  const handleSelectCV = (cv) => {
+    setSelectedCV(cv);
+  };
 
   const handleDownload = () => {
     if (!selectedCV) return;
 
     const link = document.createElement("a");
-    link.href = `/${selectedCV.file}`;
+    link.href = `/${selectedCV.file}`; // Assurez-vous que le fichier est bien dans "public/"
     link.download = selectedCV.file;
     document.body.appendChild(link);
     link.click();
@@ -37,10 +41,14 @@ const CV = () => {
           <div className="glass-container rounded-3xl p-8 border border-white/10">
             {/* Expérience Professionnelle */}
             <div className="mb-12">
-              <h3 className="text-white text-2xl font-mono mb-6">Professional Experience</h3>
+              <h3 className="text-white text-2xl font-mono mb-6">
+                Professional Experience
+              </h3>
               <div className="space-y-8">
                 <div className="border-l-2 border-white/20 pl-6">
-                  <h4 className="text-white text-xl">BP FLOW — Front-end Web Developer</h4>
+                  <h4 className="text-white text-xl">
+                    BP FLOW — Front-end Web Developer
+                  </h4>
                   <p className="text-white/60 font-mono">2024</p>
                   <ul className="text-white/80 mt-2 space-y-2 list-disc pl-4">
                     <li>Development of a SaaS application with a scalable and efficient frontend architecture using React and TypeScript</li>
@@ -61,16 +69,6 @@ const CV = () => {
                         <li>Frontend development for multiple complex projects, focusing on clean, efficient code and optimal user experience</li>
                         <li>Use of several development frameworks, including React, Tailwind, Bootstrap, Next.js, and TypeScript, for a versatile skill set in frontend technologies</li>
                         <li>API integration across various websites, with an emphasis on data security and performance optimization</li>
-                      </ul>
-                    </div>
-
-                    <div className="border-l-2 border-white/20 pl-6">
-                      <h4 className="text-white text-xl">ASBL RYD — Communication Officer and Assistant Project Manager</h4>
-                      <p className="text-white/60 font-mono">2022</p>
-                      <ul className="text-white/80 mt-2 space-y-2 list-disc pl-4">
-                        <li>Design for communication with Adobe suite (Photoshop, InDesign, Illustrator, Premiere Pro) and Canva</li>
-                        <li>Creation of visually appealing content for marketing department</li>
-                        <li>Community management on social media platforms</li>
                       </ul>
                     </div>
                   </>
@@ -96,14 +94,42 @@ const CV = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal de sélection du CV */}
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className=" p-6 rounded-lg shadow-lg w-96 text-center border border-white/10">
-      
-            
+          <div className="p-6 rounded-lg shadow-lg w-96 text-center border border-white/10 bg-gray-900 text-white">
+            <h2 className="text-lg font-semibold">Sélectionnez un CV</h2>
+            <div className="mt-4">
+              {cvOptions.map((cv) => (
+                <button
+                  key={cv.id}
+                  className={`block w-full px-4 py-2 my-2 rounded-lg ${
+                    selectedCV?.id === cv.id ? "bg-blue-500 text-white" : "bg-gray-700 text-white"
+                  }`}
+                  onClick={() => handleSelectCV(cv)}
+                >
+                  {cv.name}
+                </button>
+              ))}
+            </div>
+
             <div className="mt-4 flex justify-between">
-              <button onClick={() => setShowModal(false)} className="px-4 py-2 bg-gray-300 rounded-lg">Annuler</button>
-              <button onClick={handleDownload} disabled={!selectedCV} className={`px-4 py-2 rounded-lg ${selectedCV ? "bg-blue-600 text-white" : "bg-gray-400 cursor-not-allowed"}`}>Télécharger</button>
+              <button
+                onClick={() => setShowModal(false)}
+                className="px-4 py-2 bg-gray-300 rounded-lg"
+              >
+                Annuler
+              </button>
+              <button
+                onClick={handleDownload}
+                disabled={!selectedCV}
+                className={`px-4 py-2 rounded-lg ${
+                  selectedCV ? "bg-blue-600 text-white" : "bg-gray-400 cursor-not-allowed"
+                }`}
+              >
+                Télécharger
+              </button>
             </div>
           </div>
         </div>
