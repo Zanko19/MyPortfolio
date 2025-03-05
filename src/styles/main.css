@@ -202,3 +202,12 @@ html {
     transform: rotate(360deg);
   }
 }
+/* styles/globals.css */
+@keyframes glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.glow-line {
+  animation: glow 2s infinite;
+}

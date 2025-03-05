@@ -48,22 +48,22 @@ const About = () => {
                 className="w-24 h-24 rounded-full border-2 border-[rgb(199,50,49)]"
               />
               <p className="text-white/80 font-mono text-sm leading-relaxed ml-4 mb-2">
-                Passionné par le développement web et l'exploration spatiale, je
-                vois chaque projet comme une mission à accomplir avec précision,
-                créativité et curiosité.<br></br>
+              Passionate about web development and space exploration, I see
+              every project as a mission to accomplish with precision,
+              creativity, and curiosity.<br></br>
               </p>
             </div>
             <p className="text-white/80 font-mono text-sm leading-relaxed">
-              Le front-end est mon terrain de jeu, et c’est avec React, Tailwind
-              CSS et TypeScript que je suis le plus à l’aise et que j’ai pu
-              faire mes preuves. Je conçois des interfaces modernes et
-              performantes, en mettant l'accent sur l'expérience utilisateur et
-              l’optimisation. Curieux et ambitieux, je me forme au back-end avec
-              Node.js, Express et les bases de données afin de devenir
-              full-stack. Chaque projet est une occasion d’apprendre, de
-              progresser et de repousser mes limites, toujours avec la même
-              passion pour l’innovation.<br></br>Front-end aujourd’hui,
-              full-stack demain. Toujours prêt à relever de nouveaux défis !
+              Front-end is my playground, and React,
+              Tailwind CSS, and TypeScript are where I feel most comfortable and
+              have proven myself. I build modern, high-performance interfaces
+              with a strong focus on user experience and optimization. Curious
+              and ambitious, I’m expanding my skills into back-end development
+              with Node.js, Express, and databases to become a full-stack
+              developer. Every project is an opportunity to learn, improve, and
+              push my limits, always driven by the same passion for innovation.
+              Front-end today, full-stack tomorrow. Always ready for new
+              challenges!
             </p>
           </div>
 
