@@ -39,7 +39,9 @@ html {
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
-
+.logo-shift-right {
+  transform: translateX(690px); /* Déplace le logo de 50px vers la droite */
+}
 /* Animations */
 @keyframes fadeIn {
   from {

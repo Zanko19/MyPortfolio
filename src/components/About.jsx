@@ -31,16 +31,30 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr_1fr] gap-8 max-w-6xl mx-auto">
           {/* Parcours */}
           <div className="glass-container p-6 border border-white/10 rounded-tl-[50px] rounded-tr-none rounded-br-[50px] rounded-bl-none">
-            <h3 className="text-white text-2xl font-mono mb-4">Parcours</h3>
+            <h3 className="text-white text-2xl font-mono mb-4">Journey</h3>
             <ul className="text-white/80 font-mono text-sm space-y-4">
-              <li>🚀 Formation Développeur Web - BeCode</li>
-              <li>🌌 Stage chez BpFlow - Développement Front-End</li>
-              <li>🛰️ Projet personnel : Création d'un portfolio</li>
+              <li>
+                I studied Communication at ISFSC but unfortunatelly couldn't
+                complete my degree due to<br></br> COVID-19. This led me to
+                pursue my passion for tech and join BeCode’s Junior Web
+                Developer program. Selected among 25 out of 200+ candidates, I
+                embarked on an intense and rewarding journey, mastering new
+                technologies and building projects from scratch.
+              </li>
+              <li>
+                To obtain my Junior Developer certification, I had to complete
+                an internship, which I did at BpFlow as a Junior Web Developer.
+                I completed a 3-month internship, followed by a 4-month contract
+                as a front-end developer. Over 8 months, I contributed to
+                various projects, helped build a borning SaaS, gained hands-on
+                experience, and worked in a fast-paced startup environment
+                before my contract ended due to budget constraints.
+              </li>
             </ul>
           </div>
 
           {/* Description */}
-          <div className="glass-container p-6 border border-white/10 rounded-3xl">
+          <div className="glass-container self-start p-6 border border-white/10 rounded-3xl">
             <div className="flex items-start">
               <img
                 src={me}
@@ -48,27 +62,27 @@ const About = () => {
                 className="w-24 h-24 rounded-full border-2 border-[rgb(199,50,49)]"
               />
               <p className="text-white/80 font-mono text-sm leading-relaxed ml-4 mb-2">
-              Passionate about web development and space exploration, I see
-              every project as a mission to accomplish with precision,
-              creativity, and curiosity.<br></br>
+                Passionate about web development and space exploration, I see
+                every project as a mission to accomplish with precision,
+                creativity, and curiosity.<br></br>
               </p>
             </div>
             <p className="text-white/80 font-mono text-sm leading-relaxed">
-              Front-end is my playground, and React,
-              Tailwind CSS, and TypeScript are where I feel most comfortable and
-              have proven myself. I build modern, high-performance interfaces
-              with a strong focus on user experience and optimization. Curious
-              and ambitious, I’m expanding my skills into back-end development
-              with Node.js, Express, and databases to become a full-stack
-              developer. Every project is an opportunity to learn, improve, and
-              push my limits, always driven by the same passion for innovation.
-              Front-end today, full-stack tomorrow. Always ready for new
-              challenges!
+              Front-end is my playground, React, Tailwind CSS, and
+              TypeScript are where I feel most comfortable working with. I build modern, high-performance interfaces with a strong
+              focus on user experience and optimization. Curious and ambitious,
+              I’m expanding my skills into back-end development with Node.js,
+              Express, and databases to become a full-stack developer. Every
+              project is an opportunity to learn, improve, and push my limits,
+              always driven by the same passion for innovation. Front-end today,
+              full-stack tomorrow. Always ready for new challenges! I hope a
+              company will hear me out and give a junior developer the chance to
+              be part of their team.
             </p>
           </div>
 
           {/* Hobbies */}
-          <div className="glass-container p-6 border border-white/10 rounded-tl-none rounded-tr-[50px] rounded-br-none rounded-bl-[50px]">
+          <div className="glass-container self-start p-6 border border-white/10 rounded-tl-none rounded-tr-[50px] rounded-br-none rounded-bl-[50px]">
             <h3 className="text-white text-2xl font-mono mb-6 justify-center items-center flex">
               What I like
             </h3>
