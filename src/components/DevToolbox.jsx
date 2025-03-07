@@ -9,24 +9,24 @@ const techIcons = {
   "React.js": <FaReact className="text-blue-400 text-3xl" />, 
   "Tailwind": <SiTailwindcss className="text-green-400 text-3xl" />,
   "Vue.js": <FaVuejs className="text-green-400 text-3xl" />,
-  "Angular": <SiAngular className="text-red-500 text-3xl opacity-30 blur-sm" />, 
+  "Angular": <SiAngular className="text-red-500 text-3xl opacity-30 blur-xs" />, 
 
   "Node.js": <FaNodeJs className="text-green-500 text-3xl" />, 
   "PHP": <SiPhp className="text-indigo-500 text-3xl" />, 
   "Laravel": <SiLaravel className="text-red-500 text-3xl" />, 
   "MongoDB": <SiMongodb className="text-green-600 text-3xl" />,
-  "Redis": <SiRedis className="text-red-600 text-3xl opacity-30 blur-sm" />, 
+  "Redis": <SiRedis className="text-red-600 text-3xl opacity-30 blur-xs" />, 
 
   "Git": <FaGitAlt className="text-orange-500 text-3xl" />, 
   "GitHub": <FaGithub className="text-white text-3xl" />, 
   "Docker": <FaDocker className="text-blue-400 text-3xl" />, 
   "Figma": <SiFigma className="text-pink-500 text-3xl" />,
-  "Sass": <SiSass className="text-pink-400 text-3xl opacity-30 blur-sm" />, 
+  "Sass": <SiSass className="text-pink-400 text-3xl opacity-30 blur-xs" />, 
 
   "Next.js": <SiNextdotjs className="text-white text-3xl" />, 
   "Python": <SiPython className="text-yellow-500 text-3xl" />, 
   "SQL": <SiPostgresql className="text-blue-500 text-3xl" />,
-  "GraphQL": <SiNextdotjs className="text-purple-500 text-3xl opacity-30 blur-sm" />
+  "GraphQL": <SiNextdotjs className="text-purple-500 text-3xl opacity-30 blur-xs" />
 };
 
 const categories = [
@@ -67,7 +67,7 @@ const DevToolbox = () => {
                 {category.items.map((item, idx) => (
                   <li 
                     key={idx} 
-                    className={`flex items-center space-x-3 font-mono ${techIcons[item].props.className.includes('blur-sm') ? 'text-white/50 blur-sm' : 'text-white/80'}`}
+                    className={`flex items-center space-x-3 font-mono ${techIcons[item].props.className.includes('blur-xs') ? 'text-white/80 blur-xxs' : 'text-white/80'}`}
                   >
                     {techIcons[item]}
                     <span>{item}</span>

@@ -16,9 +16,12 @@ export default {
         'flame': 'flame 1s ease-in-out infinite',
         'sideThrust': 'sideThrust 0.3s ease-in-out infinite',
       },
+      blur: {
+        xs: '1px',  // Blur personnalisé pour 1px
+        xxs: '2px', // Blur personnalisé pour 2px
+        xxxs: '3px',
+      },
     },
   },
   plugins: [],
 };
-
-
