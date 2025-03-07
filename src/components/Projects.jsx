@@ -79,17 +79,17 @@ const Projects = () => {
                       <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-0"></div>
                     )}
 
-                    {/* Affichage du nom du projet, remplacé par les technos au hover */}
+                    {/* Affichage du nom du projet */}
                     <span className="text-white font-mono text-xl sm:text-2xl text-center title-text
                       transition-all duration-300 relative z-10
                       group-hover:opacity-0 group-hover:scale-90">
                       {project.name}
                     </span>
 
-                    {/* Liste des technos affichée au hover, avec un fond semi-transparent */}
+                    {/* Liste des technos affichée en dessous du titre, visible sur mobile uniquement */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0
-                      group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-black/70 text-white px-4 py-2 rounded-lg text-center text-lg font-mono">
+                      group-hover:opacity-100 transition-opacity duration-300 sm:opacity-100 sm:mt-2 md:opacity-0 md:mt-0">
+                      <div className="bg-black/70 text-white px-4 py-2 rounded-lg text-center text-sm sm:text-lg font-mono">
                         {technologies.join(' • ')}
                       </div>
                     </div>
@@ -103,5 +103,6 @@ const Projects = () => {
     </section>
   );
 };
+
 
 export default Projects;
