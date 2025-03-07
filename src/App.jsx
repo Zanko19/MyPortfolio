@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Home />
       <ScrollToTop />
       <Footer />
+      <Analytics />
     </Layout>
   );
 }
