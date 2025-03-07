@@ -46,7 +46,7 @@ const Navbar = () => {
   <img
     src={gLogo}
     alt="G Logo"
-    className={`h-12 w-12 md:h-24 md:w-24 opacity-90 hover:opacity-100 transition-all cursor-pointer`}
+    className={`h-12 w-12 md:h-24 md:w-24 opacity-90 hover:opacity-100 transition-all cursor-pointer mt-3`}
     onClick={toggleMenu}
   />
 </div>

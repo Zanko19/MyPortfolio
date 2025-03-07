@@ -17,6 +17,17 @@ const projectImages = {
   PizzAventura: pizza
 };
 
+const projectTechnologies = {
+  Getflix: ['React', 'Tailwind', 'Node.js', 'MongoDB'],
+  Chainblog: ['PHP', 'MySQL', 'jQuery', 'Bootstrap'],
+  PRP: ['WordPress', 'Elementor', 'PHP'],
+  '1day1pic': ['NASA API', 'CSS'],
+  'BP FLOW': ['WordPress', 'Elementor', 'Custom JS'],
+  Capafix: ['WordPress', 'Elementor', 'Custom JS'],
+  PizzAventura: ['HTML', 'CSS']
+};
+
+
 const Projects = () => {
   const projects = [
     { name: 'Getflix', status: 'completed', link: 'https://github.com/Zanko19/GetFlix/tree/main' },
@@ -31,22 +42,16 @@ const Projects = () => {
 
   return (
     <section id="projects" className="min-h-screen relative">
-      {/* Titre */}
       <h2 className="text-center text-6xl font-mono text-white pt-32 mb-16 title-text">
         Projects
       </h2>
 
-      {/* Image centrale de la fusée */}
-      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <img src={rocket} alt="Rocket" className="w-48 h-48 animate-pulse" />
-      </div>
-
-      {/* Grille de projet */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto subtitle-text">
           {projects.map((project, index) => {
             const isLoading = project.status === 'pending';
             const projectImage = projectImages[project.name];
+            const technologies = projectTechnologies[project.name] || [];
 
             return (
               <div 
@@ -55,7 +60,7 @@ const Projects = () => {
                   hover:border-white/30 transition-all duration-300
                   min-h-[200px] flex items-center justify-center
                   cursor-pointer group relative overflow-hidden 
-                  ${isLoading ? 'loading-card' : ''}`} // Ajout de la classe loading-card
+                  ${isLoading ? 'loading-card' : ''}`} 
                 style={projectImage ? { 
                   backgroundImage: `url(${projectImage})`, 
                   backgroundSize: 'cover', 
@@ -71,17 +76,24 @@ const Projects = () => {
                   </div>
                 ) : (
                   <>
-                    {/* Overlay sombre (visible au départ) */}
                     {projectImage && (
                       <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-0"></div>
                     )}
 
-                    {/* Texte du projet (disparaît au hover) */}
-                    <span className="text-white font-mono text-3xl
-                      group-hover:opacity-0 group-hover:scale-90
-                      transition-all duration-300 relative z-10 text-center title-text">
+                    {/* Affichage du nom du projet, remplacé par les technos au hover */}
+                    <span className="text-white font-mono text-3xl text-center title-text
+                      transition-all duration-300 relative z-10
+                      group-hover:opacity-0 group-hover:scale-90">
                       {project.name}
                     </span>
+
+                    {/* Liste des technos affichée au hover, avec un fond semi-transparent */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0
+                      group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="bg-black/70 text-white px-4 py-2 rounded-lg text-center text-lg font-mono">
+                        {technologies.join(' • ')}
+                      </div>
+                    </div>
                   </>
                 )}
               </div>

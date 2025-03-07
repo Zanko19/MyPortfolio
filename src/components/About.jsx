@@ -31,16 +31,13 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr_1fr] gap-8 max-w-6xl mx-auto">
           {/* Parcours */}
           <div className="glass-container p-6 border border-white/10 rounded-tl-[50px] rounded-tr-none rounded-br-[50px] rounded-bl-none">
-            <h3 className="text-white text-2xl font-mono mb-4">Journey</h3>
+            <h3 className="text-white text-2xl font-mono mb-4 text-center">Journey</h3>
             <ul className="text-white/80 font-mono text-sm space-y-4">
-              <li>
-                I studied Communication at ISFSC but unfortunatelly couldn't
-                complete my degree due to<br></br> COVID-19. This led me to
-                pursue my passion for tech and join BeCode’s Junior Web
-                Developer program. Selected among 25 out of 200+ candidates, I
-                embarked on an intense and rewarding journey, mastering new
-                technologies and building projects from scratch.
-              </li>
+            <li>
+  I studied Communication until my final year at <a href="https://isfsc.be/communication/" target="_blank" rel="noopener noreferrer" className="text-grey-300 underline hover:text-blue-300">ISFSC</a>, but when it came time to work on my thesis, I questioned whether this was truly the path I wanted to follow. That’s when I decided to pursue my passion for tech and joined BeCode’s Junior Web Developer program. Selected among 25 out of 200+ candidates, I embarked on an intense and rewarding journey, mastering new technologies and building projects from scratch.
+</li>
+
+
               <li>
                 To obtain my Junior Developer certification, I had to complete
                 an internship, which I did at BpFlow as a Junior Web Developer.
@@ -68,16 +65,16 @@ const About = () => {
               </p>
             </div>
             <p className="text-white/80 font-mono text-sm leading-relaxed">
-              Front-end is my playground, React, Tailwind CSS, and
-              TypeScript are where I feel most comfortable working with. I build modern, high-performance interfaces with a strong
-              focus on user experience and optimization. Curious and ambitious,
-              I’m expanding my skills into back-end development with Node.js,
-              Express, and databases to become a full-stack developer. Every
-              project is an opportunity to learn, improve, and push my limits,
-              always driven by the same passion for innovation. Front-end today,
-              full-stack tomorrow. Always ready for new challenges! I hope a
-              company will hear me out and give a junior developer the chance to
-              be part of their team.
+              Front-end is my playground, React, Tailwind CSS, and TypeScript
+              are where I feel most comfortable working with. I build modern,
+              high-performance interfaces with a strong focus on user experience
+              and optimization. Curious and ambitious, I’m expanding my skills
+              into back-end development with Node.js, Express, and databases to
+              become a full-stack developer. Every project is an opportunity to
+              learn, improve, and push my limits, always driven by the same
+              passion for innovation. Front-end today, full-stack tomorrow.
+              Always ready for new challenges! I hope a company will hear me out
+              and give a junior developer the chance to be part of their team.
             </p>
           </div>
 

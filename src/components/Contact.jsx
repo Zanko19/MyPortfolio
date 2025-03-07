@@ -128,13 +128,13 @@ const Contact = () => {
 
           {/* Liens sociaux */}
           <div className="mt-4 flex justify-center space-x-6">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Zanko19" target="_blank" rel="noopener noreferrer">
               <FaGithub className="text-white/60 hover:text-white transition-colors" size={24} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/guillaume-dedeurwaerder-322103177/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="text-white/60 hover:text-white transition-colors" size={24} />
             </a>
-            <a href="mailto:example@example.com">
+            <a href="mailto:guillaumeddw@hotmail.com">
               <FaEnvelope className="text-white/60 hover:text-white transition-colors" size={24} />
             </a>
           </div>

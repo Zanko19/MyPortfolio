@@ -9,7 +9,7 @@ const techIcons = {
   "React.js": <FaReact className="text-blue-400 text-3xl" />, 
   "Tailwind": <SiTailwindcss className="text-green-400 text-3xl" />,
   "Vue.js": <FaVuejs className="text-green-400 text-3xl" />,
-  "Angular": <SiAngular className="text-red-500 text-3xl opacity-30 blur-xs" />, 
+  "Angular": <SiAngular className="text-red-500 text-3xl" />, 
 
   "Node.js": <FaNodeJs className="text-green-500 text-3xl" />, 
   "PHP": <SiPhp className="text-indigo-500 text-3xl" />, 
@@ -21,22 +21,22 @@ const techIcons = {
   "GitHub": <FaGithub className="text-white text-3xl" />, 
   "Docker": <FaDocker className="text-blue-400 text-3xl" />, 
   "Figma": <SiFigma className="text-pink-500 text-3xl" />,
-  "Sass": <SiSass className="text-pink-400 text-3xl opacity-30 blur-xs" />, 
+  "Sass": <SiSass className="text-pink-400 text-3xl" />, 
 
   "Next.js": <SiNextdotjs className="text-white text-3xl" />, 
   "Python": <SiPython className="text-yellow-500 text-3xl" />, 
-  "SQL": <SiPostgresql className="text-blue-500 text-3xl" />,
+  "SQL": <SiPostgresql className="text-blue-500 text-3xl blur-xs" />,
   "GraphQL": <SiNextdotjs className="text-purple-500 text-3xl opacity-30 blur-xs" />
 };
 
 const categories = [
   { 
     category: "Front-end", 
-    items: ["HTML", "CSS", "JavaScript", "TypeScript", "React.js", "Angular"] 
+    items: ["HTML", "CSS", "JavaScript", "TypeScript", "React.js"] 
   },
   { 
     category: "Back-end", 
-    items: ["Node.js", "PHP", "Laravel", "MongoDB", "Redis"] 
+    items: ["Node.js", "PHP", "Laravel", "MongoDB"] 
   },
   { 
     category: "Tools", 
@@ -44,7 +44,7 @@ const categories = [
   },
   { 
     category: "Learning", 
-    items: ["Next.js", "Python", "SQL", "GraphQL"] 
+    items: [ "Angular","Python","Next.js",  "SQL", "GraphQL"] 
   }
 ];
 
