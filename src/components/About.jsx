@@ -43,7 +43,7 @@ const About = () => {
                 an internship, which I did at BpFlow as a Junior Web Developer.
                 I completed a 3-month internship, followed by a 4-month contract
                 as a front-end developer. Over 8 months, I contributed to
-                various projects, helped build a borning SaaS, gained hands-on
+                various projects, helped build an emerging SaaS, gained hands-on
                 experience, and worked in a fast-paced startup environment
                 before my contract ended due to budget constraints.
               </li>

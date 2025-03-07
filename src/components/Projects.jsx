@@ -27,7 +27,6 @@ const projectTechnologies = {
   PizzAventura: ['HTML', 'CSS']
 };
 
-
 const Projects = () => {
   const projects = [
     { name: 'Getflix', status: 'completed', link: 'https://github.com/Zanko19/GetFlix/tree/main' },
@@ -47,7 +46,7 @@ const Projects = () => {
       </h2>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto subtitle-text">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 sm:gap-8 max-w-5xl mx-auto subtitle-text">
           {projects.map((project, index) => {
             const isLoading = project.status === 'pending';
             const projectImage = projectImages[project.name];
@@ -81,7 +80,7 @@ const Projects = () => {
                     )}
 
                     {/* Affichage du nom du projet, remplacé par les technos au hover */}
-                    <span className="text-white font-mono text-3xl text-center title-text
+                    <span className="text-white font-mono text-xl sm:text-2xl text-center title-text
                       transition-all duration-300 relative z-10
                       group-hover:opacity-0 group-hover:scale-90">
                       {project.name}
