@@ -41,7 +41,7 @@ const Navbar = () => {
             <a href="#projects" className="text-white/80 hover:text-white transition-all px-2">Projects</a>
           </div>
 
-          {/* Logo central avec transformation au scroll */}
+          {/* Logo central avec transformation au scrolffl */}
           <div className={`flex justify-center items-center w-full transition-all ${scrolling ? 'fixed right-0 top-0 logo-shift-right' : ''}`}>
   <img
     src={gLogo}
