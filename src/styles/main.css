@@ -1,149 +1,97 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
-
 html {
-  scroll-behavior : smooth;
+  scroll-behavior: smooth;
 }
 
+/* Titre avec contour */
 .title-text {
-  font-family: "Orbitron";
-  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
-  color: rgba(255, 255, 255, 0.95);
-}
-.title-text {
+  font-family: "Orbitron", sans-serif;
   color: transparent;
   -webkit-text-stroke: 1px white; /* Contour blanc */
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
+
+/* Sous-titre */
 .subtitle-text {
   font-family: "Space Mono", monospace;
   text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* Glass effect */
+/* Effet Glass */
 .glass-container {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(8px);
   transition: all 0.3s ease;
 }
-
 .glass-container:hover {
   background: rgba(255, 255, 255, 0.06);
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
+
+/* Décalage du logo (vérifiez si 690px est bien voulu) */
 .logo-shift-right {
-  transform: translateX(690px); /* Déplace le logo de 50px vers la droite */
-}
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  transform: translateX(690px); /* Vérifier : la valeur actuelle déplace le logo de 690px */
 }
 
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 .animate-fadeIn {
   animation: fadeIn 1s ease-out;
 }
 
-/* Animation de pulsation pour la fusée */
 @keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1) translateY(0);
-  }
-  50% {
-    transform: scale(1.05) translateY(-10px);
-  }
+  0%, 100% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.05) translateY(-10px); }
 }
-
 .animate-pulse {
   animation: pulse 3s ease-in-out infinite;
 }
 
-/* Animation de flamme normale */
 @keyframes flame {
-  0%,
-  100% {
-    transform: translateX(-50%) scaleY(0.8);
-    opacity: 0.5;
-  }
-  50% {
-    transform: translateX(-50%) scaleY(1.2);
-    opacity: 0.8;
-  }
+  0%, 100% { transform: translateX(-50%) scaleY(0.8); opacity: 0.5; }
+  50% { transform: translateX(-50%) scaleY(1.2); opacity: 0.8; }
 }
 
-/* Animation de propulsion au clic */
 @keyframes thrust {
-  0% {
-    transform: translateX(-50%) scaleY(2);
-    opacity: 0.8;
-  }
-  50% {
-    transform: translateX(-50%) scaleY(2.5);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-50%) scaleY(1);
-    opacity: 0.8;
-  }
+  0% { transform: translateX(-50%) scaleY(2); opacity: 0.8; }
+  50% { transform: translateX(-50%) scaleY(2.5); opacity: 1; }
+  100% { transform: translateX(-50%) scaleY(1); opacity: 0.8; }
 }
 
-/* Animation des flammes latérales */
 @keyframes sideThrust {
-  0%,
-  100% {
-    transform: scaleY(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: scaleY(2);
-    opacity: 0.8;
-  }
+  0%, 100% { transform: scaleY(1); opacity: 0.5; }
+  50% { transform: scaleY(2); opacity: 0.8; }
 }
-
 .animate-flame {
   animation: flame 10s infinite ease-in-out;
 }
-
 .animate-thrust {
   animation: thrust 3s infinite ease-in-out;
 }
-
 .animate-sideThrust {
   animation: sideThrust 2s infinite ease-in-out;
 }
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
 
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
 
-.neon-text {
-  text-shadow: 0 0 8px #00eaff, 0 0 15px #00eaff;
-  font-weight: bold;
-  animation: flicker 1.5s infinite alternate;
-}
-
+/* Effet néon */
 @keyframes flicker {
   0% {
     opacity: 0.8;
@@ -154,26 +102,6 @@ html {
     text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
   }
 }
-
-/* Styles spécifiques pour la case "Loading.." */
-.loading-card {
-  backdrop-filter: blur(5px);
-  background: rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-/* Icône sablier animé */
-.loading-icon {
-  font-size: 2rem;
-  animation: spin 1.5s linear infinite;
-  color: #00eaff;
-}
-
-/* Effet néon sur "Coming Soon..." */
 .neon-text {
   color: white;
   text-shadow: 0 0 8px #00eaff, 0 0 15px #00eaff;
@@ -183,33 +111,70 @@ html {
   margin-top: 0.5rem;
 }
 
-/* Animation de l’effet néon */
-@keyframes flicker {
-  0% {
-    opacity: 0.8;
-    text-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff;
-  }
-  100% {
-    opacity: 1;
-    text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
-  }
+/* Styles spécifiques pour "Loading..." */
+.loading-card {
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.loading-icon {
+  font-size: 2rem;
+  animation: spin 1.5s linear infinite;
+  color: #00eaff;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-/* Animation de rotation légère */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/* styles/globals.css */
+/* Glow effect */
 @keyframes glow {
   0%, 100% { opacity: 0.5; }
   50% { opacity: 1; }
 }
-
 .glow-line {
   animation: glow 2s infinite;
+}
+.shadow-neon {
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.8), 0 0 40px rgba(0, 170, 255, 0.5);
+}
+.hover-glow {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.hover-glow::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #00aaff;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+.hover-glow:hover::before {
+  width: 100%;
+  box-shadow: 0 0 10px #00aaff;
+}
+.hover-glow:hover {
+  color: #00aaff;
+  text-shadow: 0 0 8px #00aaff;
+}
+@keyframes neonBorder {
+  0% {
+    box-shadow: 0 0 5px #00aaff, 0 0 10px #00aaff;
+  }
+  100% {
+    box-shadow: 0 0 15px #00aaff, 0 0 30px #00aaff;
+  }
+}
+
+.neon-border {
+  border-bottom: 2px solid #00aaff;
+  animation: neonBorder 1.5s infinite alternate;
 }
