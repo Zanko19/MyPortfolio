@@ -3,8 +3,8 @@ import Home from './pages/Home';
 import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { NavbarProvider } from "./context/Navbarcontext"; // 👈 Import du Provider
-import MobileMenu from "./components/MobileMenu"; // 👈 Import du menu mobile
+import { NavbarProvider } from "./context/Navbarcontext";
+import MobileMenu from "./components/MobileMenu";
 import { Analytics } from "@vercel/analytics/react";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <NavbarProvider>
       <Layout>
         <Navbar />
-        <MobileMenu /> {/* 👈 Ajout du menu mobile */}
+        <MobileMenu />
         <Home />
         <ScrollToTop />
         <Footer />
