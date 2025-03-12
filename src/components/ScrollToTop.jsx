@@ -25,7 +25,7 @@ const ScrollToTop = () => {
       behavior: 'smooth'
     });
     
-    // Désactive l'effet de lancement après l'animation
+ 
     setTimeout(() => setIsLaunching(false), 1000);
   };
 
@@ -43,7 +43,7 @@ const ScrollToTop = () => {
           ${isLaunching ? 'scale-110' : ''}`}
       />
       
-      {/* Flammes principales */}
+
       <div className={`
         absolute bottom-0 left-1/2 -translate-x-1/4
         w-6 h-8 opacity-80
@@ -53,7 +53,7 @@ const ScrollToTop = () => {
           rounded-b-full blur-sm"></div>
       </div>
 
-      {/* Petites flammes latérales (visibles uniquement pendant le lancement) */}
+
       {isLaunching && (
         <>
           <div className="absolute bottom-1 left-[40%] w-3 h-8

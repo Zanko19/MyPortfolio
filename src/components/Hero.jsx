@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section id="hero" className="min-h-screen relative">
       <div className="container mx-auto px-4 pt-32 flex flex-col items-center">
-        {/* Titre principal dans un cadre arrondi avec bordure */}
+
         <div className="w-full max-w-4xl mx-auto p-8 rounded-[40px] glass-container">
           <h1 className="text-center text-4xl sm:text-6xl font-bold tracking-wider uppercase mb-4 title-text">
             2025 PORTFOLIO
@@ -36,15 +36,15 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Boutons */}
+
         <div className="flex flex-wrap justify-center gap-8 mt-8">
           {["Projects", "DevTools", "CV"].map((text) => (
             <button
               key={text}
               onClick={() => {
-                const section = document.getElementById(text.toLowerCase()); // Récupère l'élément avec l'id correspondant
+                const section = document.getElementById(text.toLowerCase()); 
                 if (section) {
-                  section.scrollIntoView({ behavior: "smooth" }); // Scroll fluide
+                  section.scrollIntoView({ behavior: "smooth" });
                 }
               }}
               className="px-8 py-4 sm:px-12 sm:py-4 rounded-full 

@@ -12,24 +12,23 @@ import saturn from "../assets/space.png";
 const About = () => {
   return (
     <section id="about" className="min-h-screen relative">
-      {/* Planète décorative */}
+    
       <img
         src={saturn}
         alt="Planet"
         className="absolute left-20 top-16 w-54 h-48 animate-float"
       />
-
       <div className="container mx-auto px-4 pt-32 relative z-10">
-        {/* Titre avec avatar */}
+ 
         <div className="text-center mb-6">
           <h2 className="text-6xl font-mono text-white title-text ">
             About me
           </h2>
         </div>
 
-        {/* Grille 3 colonnes */}
+
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr_1fr] gap-8 max-w-6xl mx-auto">
-          {/* Parcours */}
+
           <div className="glass-container p-6 border border-white/10 rounded-tl-[50px] rounded-tr-none rounded-br-[50px] rounded-bl-none">
             <h3 className="text-white text-2xl font-mono mb-4 text-center">Journey</h3>
             <ul className="text-white/80 font-mono text-sm space-y-4">
@@ -50,7 +49,6 @@ const About = () => {
             </ul>
           </div>
 
-          {/* Description */}
           <div className="glass-container self-start p-6 border border-white/10 rounded-3xl">
             <div className="flex items-start">
               <img
@@ -78,13 +76,13 @@ const About = () => {
             </p>
           </div>
 
-          {/* Hobbies */}
+
           <div className="glass-container self-start p-6 border border-white/10 rounded-tl-none rounded-tr-[50px] rounded-br-none rounded-bl-[50px]">
             <h3 className="text-white text-2xl font-mono mb-6 justify-center items-center flex">
               What I like
             </h3>
             <div className="grid grid-cols-2 gap-6">
-              {/* Conteneur pour chaque image */}
+
               <div className="hover-card flex justify-center items-center relative group">
                 <img src={code} alt="Code" className="w-20 h-20" />
                 <div className="absolute bottom-0 bg-black/75 text-white text-sm p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">

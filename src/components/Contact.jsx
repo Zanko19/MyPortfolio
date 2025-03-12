@@ -23,22 +23,22 @@ const Contact = () => {
       return;
     }
 
-    // Envoi de l'email via EmailJS
+  
     emailjs.send(
-      'service_15hmfvf', // Service ID
-      'template_1allu01', // Template ID
+      'service_15hmfvf',
+      'template_1allu01',
       {
         user_name: formData.name,
         user_email: formData.email,
         message: formData.message
       },
-      { publicKey: 'K8zs9zeyeOsAmEtok' } // Public Key
+      { publicKey: 'K8zs9zeyeOsAmEtok' } 
     ).then(
       (response) => {
         console.log('Email envoyé avec succès', response.status, response.text);
         setSuccessMessage("Message envoyé avec succès !");
         setErrorMessage("");
-        setFormData({ name: '', email: '', message: '' }); // Réinitialisation du formulaire
+        setFormData({ name: '', email: '', message: '' });
       },
       (error) => {
         console.error('Erreur lors de l’envoi de l’email', error);
@@ -107,7 +107,7 @@ const Contact = () => {
                 ></textarea>
               </div>
 
-              {/* Affichage des messages de succès ou d'erreur */}
+
               {successMessage && (
                 <p className="text-green-500 text-center">{successMessage}</p>
               )}
@@ -126,7 +126,7 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* Liens sociaux */}
+
           <div className="mt-4 flex justify-center space-x-6">
             <a href="https://github.com/Zanko19" target="_blank" rel="noopener noreferrer">
               <FaGithub className="text-white/60 hover:text-white transition-colors" size={24} />

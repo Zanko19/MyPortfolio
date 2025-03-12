@@ -3,13 +3,13 @@ import { useState } from "react";
 const CV = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedCV, setSelectedCV] = useState(null);
-  const [showMore, setShowMore] = useState(false); // Gérer l'affichage du reste du CV
+  const [showMore, setShowMore] = useState(false); 
 
   const cvOptions = [
     {
       id: "cv-eng",
       name: "CV Guillaume Dedeurwaerder",
-      file: "CV_2025.pdf", // Le fichier doit être dans le dossier "public"
+      file: "CV_2025.pdf", 
       image: "preview-cv-eng.png",
     },
   ];
@@ -22,12 +22,12 @@ const CV = () => {
     if (!selectedCV) return;
 
     const link = document.createElement("a");
-    link.href = `/${selectedCV.file}`; // Assurez-vous que le fichier est bien dans "public/"
+    link.href = `/${selectedCV.file}`; 
     link.download = selectedCV.file;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    setShowModal(false); // Fermer le modal après le téléchargement
+    setShowModal(false);
   };
 
   return (
@@ -39,7 +39,7 @@ const CV = () => {
 
         <div className="max-w-4xl mx-auto">
           <div className="glass-container rounded-3xl p-8 border border-white/10">
-            {/* Expérience Professionnelle */}
+
             <div className="mb-12">
               <h3 className="text-white text-2xl font-mono mb-6">
                 Professional Experience
@@ -95,7 +95,7 @@ const CV = () => {
         </div>
       </div>
 
-      {/* Modal de sélection du CV */}
+
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="p-6 rounded-lg shadow-lg w-96 text-center border border-white/10 bg-gray-900 text-white">

@@ -6,9 +6,9 @@ const Layout = ({ children }) => {
 
   const generateStars = useCallback(() => {
     return Array(200).fill().map(() => ({
-      x: Math.random() * 2000 - 1000, // Position X centrée autour de 0
-      y: Math.random() * 2000 - 1000, // Position Y centrée autour de 0
-      z: Math.random() * 1500, // Profondeur
+      x: Math.random() * 2000 - 1000,
+      y: Math.random() * 2000 - 1000,
+      z: Math.random() * 1500,
     }));
   }, []);
 
@@ -27,10 +27,10 @@ const Layout = ({ children }) => {
     const moveStars = setInterval(() => {
       setStars(prevStars => 
         prevStars.map(star => {
-          // Déplace l'étoile vers l'avant (diminue Z)
+
           let newZ = star.z - 10;
           
-          // Si l'étoile est trop proche, la replacer au fond
+
           if (newZ < 0) {
             return {
               x: Math.random() * 2000 - 1000,
@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
           };
         })
       );
-    }, 16); // ~60fps
+    }, 16);
 
     return () => clearInterval(moveStars);
   }, []);
@@ -62,11 +62,10 @@ const Layout = ({ children }) => {
         backgroundColor: 'rgba(0, 0, 0, 0.9)'
       }}
     >
-      {/* Étoiles en perspective */}
+
       <div className="fixed inset-0 pointer-events-none"
            style={{ perspective: '8000px' }}>
         {stars.map((star, index) => {
-          // Calcul de la position à l'écran avec effet de perspective
           const scale = 1500 / (star.z);
           const x = (star.x * scale) + window.innerWidth / 2;
           const y = (star.y * scale) + window.innerHeight / 2;
@@ -90,7 +89,6 @@ const Layout = ({ children }) => {
         })}
       </div>
       
-      {/* Contenu de l'application */}
       <div className="relative z-10">
         {children}
       </div>
