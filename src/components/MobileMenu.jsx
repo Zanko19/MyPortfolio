@@ -6,6 +6,20 @@ import astronaut from "../assets/astronaut.png";
 const MobileMenu = () => {
   const { isOpen, closeMenu } = useNavbar();
 
+  // 🔥 Fonction pour gérer le scroll et fermer le menu
+  const handleNavigation = (e, targetId) => {
+    e.preventDefault(); // Empêche le comportement par défaut du lien
+    closeMenu(); // Ferme le menu
+
+    // 🏹 Attend la fermeture du menu, puis scroll à la section
+    setTimeout(() => {
+      const targetSection = document.querySelector(targetId);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 300); // Petit délai pour assurer la fermeture du menu
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -36,46 +50,34 @@ const MobileMenu = () => {
             </button>
 
             <div className="w-full pt-16 space-y-6">
-              <a href="#hero" 
+              <a href="#hero" onClick={(e) => handleNavigation(e, "#hero")} 
                 className="flex items-center space-x-4 text-white/80 hover:text-white 
-                         transition-all duration-300 text-xl" 
-                onClick={closeMenu}
-              >
+                         transition-all duration-300 text-xl">
                 <FaHome size={24} /> <span>Home</span>
               </a>
-              <a href="#about" 
+              <a href="#about" onClick={(e) => handleNavigation(e, "#about")} 
                 className="flex items-center space-x-4 text-white/80 hover:text-white 
-                         transition-all duration-300 text-xl" 
-                onClick={closeMenu}
-              >
+                         transition-all duration-300 text-xl">
                 <FaUser size={24} /> <span>About</span>
               </a>
-              <a href="#projects" 
+              <a href="#projects" onClick={(e) => handleNavigation(e, "#projects")} 
                 className="flex items-center space-x-4 text-white/80 hover:text-white 
-                         transition-all duration-300 text-xl" 
-                onClick={closeMenu}
-              >
+                         transition-all duration-300 text-xl">
                 <FaProjectDiagram size={24} /> <span>Projects</span>
               </a>
-              <a href="#devtools" 
+              <a href="#devtools" onClick={(e) => handleNavigation(e, "#devtools")} 
                 className="flex items-center space-x-4 text-white/80 hover:text-white 
-                         transition-all duration-300 text-xl" 
-                onClick={closeMenu}
-              >
+                         transition-all duration-300 text-xl">
                 <FaTools size={24} /> <span>DevTools</span>
               </a>
-              <a href="#cv" 
+              <a href="#cv" onClick={(e) => handleNavigation(e, "#cv")} 
                 className="flex items-center space-x-4 text-white/80 hover:text-white 
-                         transition-all duration-300 text-xl" 
-                onClick={closeMenu}
-              >
+                         transition-all duration-300 text-xl">
                 <FaFile size={24} /> <span>CV</span>
               </a>
-              <a href="#contact" 
+              <a href="#contact" onClick={(e) => handleNavigation(e, "#contact")} 
                 className="flex items-center space-x-4 text-white/80 hover:text-white 
-                         transition-all duration-300 text-xl" 
-                onClick={closeMenu}
-              >
+                         transition-all duration-300 text-xl">
                 <FaEnvelope size={24} /> <span>Contact</span>
                 <img 
                   src={astronaut} 

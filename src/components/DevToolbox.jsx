@@ -60,7 +60,8 @@ const DevToolbox = () => {
           {categories.map((category, index) => (
             <div 
               key={index}
-              className="glass-container p-6 border border-white/10 rounded-tl-[50px] rounded-tr-none rounded-br-[50px] rounded-bl-none"
+              className="glass-container p-6 border border-white/10 rounded-tl-[50px] rounded-tr-none rounded-br-[50px] rounded-bl-none 
+                         w-[80%] max-w-[50%] mx-auto md:max-w-[80%]"
             >
               <h3 className="text-white text-2xl font-mono mb-6">{category.category}</h3>
               <ul className="space-y-4">
@@ -81,5 +82,6 @@ const DevToolbox = () => {
     </section>
   );
 };
+
 
 export default DevToolbox;
