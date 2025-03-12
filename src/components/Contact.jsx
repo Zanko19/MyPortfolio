@@ -15,7 +15,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validation de l'email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       setErrorMessage("Veuillez entrer une adresse email valide.");
@@ -23,29 +22,30 @@ const Contact = () => {
       return;
     }
 
-  
-    emailjs.send(
-      'service_15hmfvf',
-      'template_1allu01',
-      {
-        user_name: formData.name,
-        user_email: formData.email,
-        message: formData.message
-      },
-      { publicKey: 'K8zs9zeyeOsAmEtok' } 
-    ).then(
-      (response) => {
-        console.log('Email envoyé avec succès', response.status, response.text);
-        setSuccessMessage("Message envoyé avec succès !");
-        setErrorMessage("");
-        setFormData({ name: '', email: '', message: '' });
-      },
-      (error) => {
-        console.error('Erreur lors de l’envoi de l’email', error);
-        setErrorMessage("Erreur lors de l’envoi du message.");
-        setSuccessMessage("");
-      }
-    );
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          user_name: formData.name,
+          user_email: formData.email,
+          message: formData.message,
+        },
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+      )
+      .then(
+        (response) => {
+          console.log('Email envoyé avec succès', response.status, response.text);
+          setSuccessMessage("Message envoyé avec succès !");
+          setErrorMessage("");
+          setFormData({ name: '', email: '', message: '' });
+        },
+        (error) => {
+          console.error("Erreur lors de l'envoi de l'email", error);
+          setErrorMessage("Erreur lors de l'envoi du message.");
+          setSuccessMessage("");
+        }
+      );
   };
 
   const handleChange = (e) => {

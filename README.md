@@ -9,7 +9,7 @@
 
 Portfolio moderne et interactif mettant en valeur mes compétences en développement web front-end. Conçu avec une esthétique spatiale unique et des animations fluides pour une expérience utilisateur immersive.
 
-![Portfolio Preview](preview.png)
+![Portfolio Preview](./src/assets/preview.png)
 
 ## ✨ Caractéristiques
 
