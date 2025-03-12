@@ -49,7 +49,7 @@ const MobileMenu = () => {
               <FaTimes />
             </button>
 
-            <div className="w-full pt-16 space-y-6">
+            <div className="w-full pt-2 space-y-6">
               <a href="#hero" onClick={(e) => handleNavigation(e, "#hero")} 
                 className="flex items-center space-x-4 text-white/80 hover:text-white 
                          transition-all duration-300 text-xl">
