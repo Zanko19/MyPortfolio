@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { FaHome, FaUser, FaProjectDiagram, FaTools, FaFile, FaEnvelope, FaTimes } from "react-icons/fa";
-import { useNavbar } from "../context/Navbarcontext";
+import { useNavbar } from "../context/navcon";
 import astronaut from "../assets/astronaut.png";
 
 const MobileMenu = () => {

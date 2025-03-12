@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaHome, FaUser, FaProjectDiagram, FaTools, FaFile, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { useNavbar } from "../context/Navbarcontext";
+import { useNavbar } from "../context/navcon";
 import gLogo from "../assets/g.png";
 import astronaut from "../assets/astronaut.png";
 
