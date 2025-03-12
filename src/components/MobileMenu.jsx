@@ -33,7 +33,7 @@ const MobileMenu = () => {
           />
 
           <motion.div
-            className="fixed top-0 right-0 w-[80%] sm:w-[60%] md:w-[40%] h-full 
+            className="fixed top-0 right-0 w-[50%] sm:w-[50%] md:w-[40%] h-auto 
                      bg-black/90 backdrop-blur-lg shadow-2xl p-6 
                      flex flex-col items-start space-y-8 z-50"
             initial={{ x: "100%" }}
