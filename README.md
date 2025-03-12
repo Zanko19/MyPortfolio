@@ -129,13 +129,10 @@ Le projet est configuré pour un déploiement sur Vercel :
 2. Configurez les variables d'environnement
 3. Déployez !
 
-## 📝 License
-
-Ce projet est sous licence MIT - voir le fichier [LICENSE.md](LICENSE.md) pour plus de détails.
 
 ## 📬 Contact
 
-- Portfolio - [guillaumeddw.dev](https://your-portfolio-url.vercel.app)
+- Portfolio - [guillaumeddw.dev](https://my-portfolio-orcin-tau-72.vercel.app/)
 - LinkedIn - [Guillaume Dedeurwaerder](https://www.linkedin.com/in/guillaume-dedeurwaerder-322103177/)
 - GitHub - [@Zanko19](https://github.com/Zanko19)
 
