@@ -50,9 +50,9 @@ const categories = [
 
 const DevToolbox = () => {
   return (
-    <section id="devtools" className="min-h-screen py-20">
+    <section id="devtools" className="min-h-screen py-10">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-6xl font-mono text-white pt-32 mb-16 title-text">
+        <h2 className="text-center text-6xl font-mono text-white pt-24 mb-16 title-text">
           Dev Toolbox
         </h2>
 

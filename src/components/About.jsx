@@ -16,9 +16,9 @@ const About = () => {
       <img
         src={saturn}
         alt="Planet"
-        className="absolute left-20 top-16 w-54 h-48 animate-float"
+        className="absolute left-20 top-2 w-54 h-48 animate-float"
       />
-      <div className="container mx-auto px-4 pt-32 relative z-10">
+      <div className="container mx-auto px-4 pt-12 relative z-10">
  
         <div className="text-center mb-6">
           <h2 className="text-6xl font-mono text-white title-text ">

@@ -5,7 +5,7 @@ import { projectsData } from "../data/projectsdata"; // Adaptez le chemin si né
 const Projects = () => {
   return (
     <section id="projects" className="min-h-screen relative">
-      <h2 className="text-center text-6xl font-mono text-white pt-32 mb-16 title-text">
+      <h2 className="text-center text-6xl font-mono text-white pt-12 mb-16 title-text">
         Projects
       </h2>
 
@@ -19,7 +19,6 @@ const Projects = () => {
                 className="glass-container rounded-3xl overflow-hidden border border-white/10 
                   hover:border-white/30 transition-all duration-300 min-h-[400px] flex flex-col"
               >
-                {/* Afficher l'image uniquement si le projet n'est pas pending et que l'image existe */}
                 {!isLoading && project.image && (
                   <div
                     className="relative w-full h-48 bg-cover bg-center"
@@ -29,7 +28,6 @@ const Projects = () => {
                   </div>
                 )}
 
-                {/* Contenu du projet */}
                 <div
                   className={`p-2 flex-1 flex ${
                     isLoading
@@ -53,7 +51,6 @@ const Projects = () => {
                         </p>
                       </div>
 
-                      {/* Technologies centrées */}
                       <div className="flex justify-center flex-wrap mt-4">
                         {project.technologies.map((tech, i) => (
                           <span
@@ -65,29 +62,34 @@ const Projects = () => {
                         ))}
                       </div>
 
-                      {/* Liens */}
-                      <div className="w-full flex space-x-4 mt-4">
-                        {project.github && (
-                          <a
-                            href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-gray-800 text-white p-3 rounded-full hover:bg-gray-600 transition-all duration-300"
-                          >
-                            <FaGithub size={20} />
-                          </a>
-                        )}
-                        {project.demo && (
-                          <a
-                            href={project.demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-primary-500 text-white p-3 rounded-full hover:bg-primary-400 transition-all duration-300"
-                          >
-                            <HiOutlineExternalLink size={20} />
-                          </a>
-                        )}
-                      </div>
+                      {/* Liens avec le même style et effet néon sur hover pour Code et Demo */}
+                      <div className="w-full flex space-x-4 mt-4 justify-center">
+  {project.github && (
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center bg-gray-800 text-white px-4 py-2 rounded-full transition-all duration-300 space-x-2  
+        hover:text-[#00C8FF] hover:shadow-lg  hover:brightness-150"
+    >
+      <FaGithub size={20} />
+      <span className="text-sm font-medium">Code</span>
+    </a>
+  )}
+  {project.demo && (
+    <a
+      href={project.demo}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center bg-gray-800 text-white px-4 py-2 rounded-full transition-all duration-300 space-x-2  
+        hover:text-[#00C8FF] hover:shadow-lg  hover:brightness-150"
+    >
+      <HiOutlineExternalLink size={20} />
+      <span className="text-sm font-medium">Demo</span>
+    </a>
+  )}
+</div>
+
                     </>
                   )}
                 </div>

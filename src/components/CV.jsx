@@ -32,7 +32,7 @@ const CV = () => {
 
   return (
     <section id="cv" className="min-h-screen relative">
-      <div className="container mx-auto px-4 pt-32">
+      <div className="container mx-auto px-4 pt-24">
         <h2 className="text-center text-6xl font-mono text-white mb-16 title-text">
           Curriculum Vitae
         </h2>
