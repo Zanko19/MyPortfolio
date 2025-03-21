@@ -36,7 +36,7 @@ const Contact = () => {
       .then(
         (response) => {
           console.log('Email envoyé avec succès', response.status, response.text);
-          setSuccessMessage("Message envoyé avec succès !");
+          setSuccessMessage("Houston, message reçu 5/5");
           setErrorMessage("");
           setFormData({ name: '', email: '', message: '' });
         },
