@@ -51,19 +51,19 @@ const categories = [
 const DevToolbox = () => {
   return (
     <section id="devtools" className="min-h-screen py-10">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         <h2 className="text-center text-6xl font-mono text-white pt-24 mb-16 title-text">
           Dev Toolbox
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto ">
           {categories.map((category, index) => (
             <div 
               key={index}
               className="glass-container p-6 border border-white/10 rounded-tl-[50px] rounded-tr-none rounded-br-[50px] rounded-bl-none 
-                         w-[80%] max-w-[50%] mx-auto md:max-w-[80%]"
+                         w-[80%] max-w-[60%] mx-auto md:max-w-[80%] "
             >
-              <h3 className="text-white text-2xl font-mono mb-6">{category.category}</h3>
+              <h3 className="text-white text-2xl font-mono mb-4 subtitle-text">{category.category}</h3>
               <ul className="space-y-4">
                 {category.items.map((item, idx) => (
                   <li 

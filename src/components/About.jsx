@@ -19,7 +19,7 @@ const About = () => {
         className="absolute left-20 top-2 w-54 h-48 animate-float"
       />
 
-      <div className="container mx-auto px-4 pt-12 relative z-10">
+      <div className="container mx-auto px-4 pt-6 relative z-10">
         <div className="text-center mb-6">
           <h2 className="text-6xl font-mono text-white title-text">
             About me
@@ -36,13 +36,13 @@ const About = () => {
                 alt="Me"
                 className="w-24 h-24 rounded-full border-2 border-[rgb(199,50,49)]"
               />
-              <p className="text-white/80 font-mono text-sm leading-relaxed ml-4 mb-2">
+              <p className="text-white/80 font-mono text-sm leading-relaxed ml-4 mb-2 text-justify ">
                 Passionate about web development and space exploration, I see
                 every project as a mission to accomplish with precision,
                 creativity, and curiosity.
               </p>
             </div>
-            <p className="text-white/80 font-mono text-sm leading-relaxed">
+            <p className="text-white/80 font-mono text-sm leading-relaxed text-justify ">
               Front-end is my playground, React, Tailwind CSS, and TypeScript
               are where I feel most comfortable working with.
               I build modern, high-performance interfaces with a strong focus on user experience and optimization.
@@ -55,8 +55,8 @@ const About = () => {
           </div>
           {/* JOURNEY */}
           <div className="glass-container p-6 border border-white/10 rounded-xl md:col-span-2 ">
-            <h3 className="text-white text-2xl font-mono mb-2 text-left">Journey</h3>
-            <ul className="text-white/80 font-mono text-sm space-y-2">
+            <h3 className="text-white text-2xl font-mono mb-2 text-left subtitle-text">Journey</h3>
+            <ul className="text-white/80 font-mono text-sm space-y-2 leading-relaxed text-justify ">
               <li>
                 I studied Communication until my final year at<br></br>  
                 <a href="https://isfsc.be/communication/" target="_blank" rel="noopener noreferrer" 
@@ -79,7 +79,7 @@ const About = () => {
 
           {/* WHAT I LIKE */}
           <div className="glass-container p-6 border border-white/10 rounded-xl md:col-span-4">
-            <h3 className="text-white text-2xl font-mono mb-6 text-center">What I like</h3>
+            <h3 className="text-white text-2xl font-mono mb-6 text-center subtitle-text">What I like</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               <div className="hover-card flex justify-center items-center relative group">
                 <img src={code} alt="Code" className="w-20 h-20" />

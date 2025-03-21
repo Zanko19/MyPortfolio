@@ -5,7 +5,7 @@ import { projectsData } from "../data/projectsdata"; // Adaptez le chemin si né
 const Projects = () => {
   return (
     <section id="projects" className="min-h-screen relative">
-      <h2 className="text-center text-6xl font-mono text-white pt-12 mb-16 title-text">
+      <h2 className="text-center text-6xl text-white pt-6 mb-16 title-text">
         Projects
       </h2>
 
@@ -45,7 +45,7 @@ const Projects = () => {
                   ) : (
                     <>
                       <div className="w-full text-center">
-                        <h3 className="text-white text-2xl font-bold">{project.name}</h3>
+                        <h3 className="text-white text-2xl font-bold subtitle-text">{project.name}</h3>
                         <p className="text-white text-sm opacity-80 mt-2">
                           {project.description}
                         </p>

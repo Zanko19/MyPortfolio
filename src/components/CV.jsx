@@ -41,7 +41,7 @@ const CV = () => {
           <div className="glass-container rounded-3xl p-8 border border-white/10">
 
             <div className="mb-12">
-              <h3 className="text-white text-2xl font-mono mb-6">
+              <h3 className="text-white text-2xl subtitle-text mb-6">
                 Professional Experience
               </h3>
               <div className="space-y-8">
